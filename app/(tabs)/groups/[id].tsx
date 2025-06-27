@@ -48,7 +48,6 @@ export default function GroupDetailScreen() {
         .eq('metric_id', metrics[0]?.id)
       setEntries(entriesData || [])
     }
-console.log("entries", entries)
     fetchEntries()
   }, [metrics])
 
@@ -59,7 +58,6 @@ console.log("entries", entries)
   if (entries.length > 0) {
     entryTotal = entries.reduce((total, entry) => total + entry.amount, 0)
   }
-  console.log("entryTotal", entryTotal)
 
   return (
     <View style={{ flex: 1, padding: 50 }}>
